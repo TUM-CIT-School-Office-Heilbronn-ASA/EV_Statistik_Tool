@@ -2,7 +2,7 @@ name: shiny-binder
 channels:
   - conda-forge
 dependencies:
-  - r-base=4.2    # core R
+  - r-base=4.3    # core R (updated version)
   - r-shiny      # shiny
   - r-tidyverse  # ggplot2, dplyr, purrr, etc
   - r-r6         # R6
@@ -15,3 +15,11 @@ dependencies:
   - r-glue       # glue
   - r-shinydashboard  # shinydashboard
   - r-here       # here
+  - r-dt         # DataTables for R
+  - r-plotly     # Interactive plots
+  - r-htmlwidgets # HTML widgets
+  - r-jsonlite   # JSON handling
+  - r-readr      # File reading
+  - r-stringr    # String manipulation
+  - r-forcats    # Factor handling
+  - r-scales     # Scaling functions for ggplot2
