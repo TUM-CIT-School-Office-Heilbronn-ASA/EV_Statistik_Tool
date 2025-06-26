@@ -1,7 +1,0 @@
-#!/usr/bin/env bash
-
-# install any additional CRAN packages
-Rscript -e "install.packages(c('grid','tools','shinyjs','DT'), repos='https://cloud.r-project.org')"
-
-# Ensure proper permissions for R packages
-chmod -R 755 ${R_LIBS_USER}

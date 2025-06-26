@@ -23,3 +23,7 @@ dependencies:
   - r-stringr    # String manipulation
   - r-forcats    # Factor handling
   - r-scales     # Scaling functions for ggplot2
+  - r-shinyjs    # shinyjs for enhanced Shiny functionality
+  - pip          # pip for Python packages
+  - pip:
+    - jupyter-rsession-proxy  # R session proxy for Jupyter

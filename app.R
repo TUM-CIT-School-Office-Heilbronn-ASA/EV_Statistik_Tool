@@ -4,6 +4,16 @@ library(shiny)
 library(here)
 library(purrr)
 
+# Configure R for better error reporting in Shiny
+options(
+  shiny.error = function() {
+    cat("Error occurred:\n")
+    traceback(max.lines = 20)
+  },
+  shiny.sanitize.errors = FALSE,  # Show full error messages (use with caution in production)
+  warn = 1  # Show warnings immediately
+)
+
 import <- function(path) {
   if (!exists(sub(".R$", "", tail(unlist(strsplit(path, "/")), 1)), mode = "environment")) {
     source(here(path))
