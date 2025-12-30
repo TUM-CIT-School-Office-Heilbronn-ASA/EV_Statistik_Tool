@@ -19,7 +19,7 @@ R Shiny Anwendung zur Visualisierung und Auswertung von EV-Bewerberdaten.
 
 ## Voraussetzungen
 - [Docker Desktop](https://www.docker.com/products/docker-desktop) oder Docker Engine mit `docker-compose`.
-- Optional: R ≥ 4.3 zum lokalen Start ohne Container.
+- Optional: R 4.3+ zum lokalen Start ohne Container.
 
 ## Schnellstart mit Docker
 1. Starte die Container:
