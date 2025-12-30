@@ -1,0 +1,12 @@
+{
+  "name": "ev_statistik_tool",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Helper scripts for running the EV Statistik Tool in Docker.",
+  "scripts": {
+    "start:docker": "docker-compose up --build -d",
+    "stop:docker": "docker-compose down",
+    "compose:up": "docker-compose up --build",
+    "compose:down": "docker-compose down"
+  }
+}

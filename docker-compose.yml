@@ -1,0 +1,13 @@
+version: "3.9"
+
+services:
+  ev-statistik-tool:
+    build: .
+    image: ev-statistik-tool:latest
+    container_name: ev-statistik-tool
+    ports:
+      - "3838:3838"
+    environment:
+      - SHINY_LOG_STDERR=1
+      - SHINY_LOG_STDOUT=1
+    restart: unless-stopped

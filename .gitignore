@@ -1,4 +1,4 @@
-# R spezifisch
+# R
 .Rhistory
 .RData
 .Rproj.user/
@@ -6,37 +6,51 @@
 .Rapp.history
 .Rprofile
 .Renviron
+*.Rproj
 
-# Shiny spezifisch
+# Shiny
 shinyapps/
 shiny-server/
-*.Rproj
 
 # R Paketverwaltung
 packrat/
 renv/library/
 renv/python/
 renv/staging/
+
+# Python cache
 __pycache__/
 *.pyc
 
-# Mac spezifisch
+# Node / JS
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# macOS / IDE
 .DS_Store
+.idea/
+.vscode/
 
 # Logs und temporäre Dateien
 *.log
 *.tmp
 *.swp
 *.bak
-*.zip
 
-# Output/Export/Plots
+# Archive und Output/Export/Plots
+*.zip
 out/
 *.png
 *.pdf
 *.svg
 
+# Docker
+*.tar
+.env
+*.pid
+
 # Sonstiges
-.idea/
-.vscode/
 *.sqlite
