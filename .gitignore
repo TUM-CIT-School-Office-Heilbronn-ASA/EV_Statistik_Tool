@@ -1,56 +1,40 @@
-# R
-.Rhistory
-.RData
-.Rproj.user/
-.Ruserdata
-.Rapp.history
-.Rprofile
-.Renviron
-*.Rproj
-
-# Shiny
-shinyapps/
-shiny-server/
-
-# R Paketverwaltung
-packrat/
-renv/library/
-renv/python/
-renv/staging/
-
-# Python cache
-__pycache__/
-*.pyc
-
-# Node / JS
 node_modules/
+dist/
+out/
+electron/R-portable/
+temp_r_download/
+.tmp/
+cache/
+*_cache/
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-package-lock.json
+lint.log
 
-# macOS / IDE
-.DS_Store
-.idea/
-.vscode/
-
-# Logs und temporäre Dateien
-*.log
-*.tmp
-*.swp
-*.bak
-
-# Archive und Output/Export/Plots
+# Build outputs
+*.blockmap
+*.dmg
+*.exe
+*.AppImage
+*.deb
 *.zip
-out/
-*.png
-*.pdf
-*.svg
+*.tar.gz
 
-# Docker
-*.tar
-.env
-*.pid
+# R artifacts
+*.Rcheck/
+.Rproj.user/
+rsconnect/
+vignettes/*.html
+vignettes/*.pdf
+.Rhistory
+.Rapp.history
+.RData
+.RDataTmp
+.Ruserdata
+.Renviron
 
-# Sonstiges
-*.sqlite
+# OS junk
+.DS_Store
+Thumbs.db

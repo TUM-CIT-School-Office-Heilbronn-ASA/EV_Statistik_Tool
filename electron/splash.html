@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>EV Statistik Tool</title>
+    <link rel="stylesheet" href="splash.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <div class="badge">EV</div>
+      <div class="title">EV Statistik Tool</div>
+      <div id="status" class="status">Starting...</div>
+      <div class="spinner" aria-hidden="true"></div>
+      <div class="hint">Preparing the R Shiny server. This can take a minute.</div>
+    </div>
+    <script>
+      window.__setStatus = (message) => {
+        const el = document.getElementById('status');
+        if (el) {
+          el.textContent = message;
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,12 +1,110 @@
 {
-  "name": "ev_statistik_tool",
+  "name": "ev-statistik-tool",
   "version": "1.0.0",
+  "description": "EV Statistik Tool - Standalone Desktop Application",
+  "main": "electron/electron-main.js",
+  "author": "TUM-CIT-School-Office-Heilbronn-ASA",
+  "license": "MIT",
   "private": true,
-  "description": "Helper scripts for running the EV Statistik Tool in Docker.",
   "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder",
+    "build:mac": "electron-builder --mac",
+    "build:win": "electron-builder --win",
+    "build:all": "electron-builder --mac --win",
+    "postinstall": "electron-builder install-app-deps",
     "start:docker": "docker-compose up --build -d",
     "stop:docker": "docker-compose down",
     "compose:up": "docker-compose up --build",
     "compose:down": "docker-compose down"
+  },
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^28.1.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.evstatistiktool.app",
+    "productName": "EV Statistik Tool",
+    "directories": {
+      "output": "dist",
+      "buildResources": "electron/build"
+    },
+    "compression": "store",
+    "files": [
+      "electron/**/*",
+      "!electron/R-portable/**/*"
+    ],
+    "asarUnpack": [
+      "app.R",
+      "Controller/**/*",
+      "Model/**/*",
+      "View/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "electron/R-portable",
+        "to": "R-portable",
+        "filter": [
+          "**/*"
+        ]
+      },
+      "app.R",
+      "Controller",
+      "Model",
+      "View"
+    ],
+    "mac": {
+      "target": [
+        {
+          "target": "dir",
+          "arch": [
+            "x64",
+            "arm64"
+          ]
+        }
+      ],
+      "category": "public.app-category.productivity",
+      "icon": "electron/build/icon.icns",
+      "hardenedRuntime": false,
+      "gatekeeperAssess": false,
+      "entitlements": null,
+      "entitlementsInherit": null
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "requestedExecutionLevel": "asInvoker",
+      "signAndEditExecutable": false
+    },
+    "linux": {
+      "target": [
+        "dir"
+      ],
+      "category": "Utility"
+    }
   }
 }
